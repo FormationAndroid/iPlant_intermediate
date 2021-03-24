@@ -20,15 +20,13 @@ class SettingsFragment : Fragment() {
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
 
         val binding: FragmentSettingsBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_settings, container, false
         )
-
-        binding.viewModel = settingsViewModel
-
+        
         return binding.root
     }
 }

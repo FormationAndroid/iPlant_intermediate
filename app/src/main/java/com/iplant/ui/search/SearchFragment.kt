@@ -20,7 +20,8 @@ class SearchFragment : Fragment() {
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+
         searchViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
 
         val binding: FragmentSearchBinding = DataBindingUtil.inflate(

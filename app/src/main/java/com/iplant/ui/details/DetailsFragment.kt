@@ -19,7 +19,7 @@ class DetailsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         detailsViewModel = ViewModelProvider(this).get(DetailsViewModel::class.java)
 
         val binding: FragmentDetailsBinding = DataBindingUtil.inflate(
