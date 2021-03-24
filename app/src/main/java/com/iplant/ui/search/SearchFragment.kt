@@ -28,8 +28,6 @@ class SearchFragment : Fragment() {
             inflater, R.layout.fragment_search, container, false
         )
 
-        binding.viewModel = searchViewModel
-
         return binding.root
     }
 

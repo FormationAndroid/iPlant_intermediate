@@ -26,7 +26,7 @@ class SettingsFragment : Fragment() {
         val binding: FragmentSettingsBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_settings, container, false
         )
-        
+
         return binding.root
     }
 }
