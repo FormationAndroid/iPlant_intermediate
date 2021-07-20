@@ -1,15 +1,3 @@
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
-com/iplant/DataBindingTriggerClass.java
- com.iplant.DataBindingTriggerClass
-androidx/databinding/library/baseAdapters/BR.java
- androidx.databinding.library.baseAdapters.BR
-com/iplant/BuildConfig.java
- com.iplant.BuildConfig
-com/iplant/BR.java
- com.iplant.BR
-androidx/databinding/DataBinderMapperImpl.java
- androidx.databinding.DataBinderMapperImpl
 com/iplant/databinding/FragmentSearchBinding.java
  com.iplant.databinding.FragmentSearchBinding
 com/iplant/databinding/FragmentSettingsBinding.java
@@ -18,12 +6,18 @@ com/iplant/databinding/FragmentDetailsBinding.java
  com.iplant.databinding.FragmentDetailsBinding
 com/iplant/databinding/ItemPlantBindingImpl.java
  com.iplant.databinding.ItemPlantBindingImpl
+com/iplant/BR.java
+ com.iplant.BR
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
 com/iplant/DataBinderMapperImpl.java
  com.iplant.DataBinderMapperImpl
  com.iplant.DataBinderMapperImpl$InnerBrLookup
  com.iplant.DataBinderMapperImpl$InnerLayoutIdLookup
 com/iplant/databinding/DialogDeleteConfirmationBinding.java
  com.iplant.databinding.DialogDeleteConfirmationBinding
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
 com/iplant/databinding/FragmentFavoritesBindingImpl.java
  com.iplant.databinding.FragmentFavoritesBindingImpl
 com/iplant/databinding/FragmentSearchBindingImpl.java
@@ -36,5 +30,11 @@ com/iplant/databinding/FragmentSettingsBindingImpl.java
  com.iplant.databinding.FragmentSettingsBindingImpl
 com/iplant/databinding/FragmentDetailsBindingImpl.java
  com.iplant.databinding.FragmentDetailsBindingImpl
+com/iplant/BuildConfig.java
+ com.iplant.BuildConfig
 com/iplant/databinding/FragmentFavoritesBinding.java
  com.iplant.databinding.FragmentFavoritesBinding
+com/iplant/DataBindingTriggerClass.java
+ com.iplant.DataBindingTriggerClass
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
