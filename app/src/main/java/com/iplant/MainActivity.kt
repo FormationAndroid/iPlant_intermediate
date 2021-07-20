@@ -3,10 +3,13 @@ package com.iplant
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.chibatching.kotpref.livedata.asLiveData
+import com.iplant.database.AppPrefs
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,5 +25,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_search, R.id.navigation_favorites, R.id.navigation_settings))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        AppPrefs.asLiveData(AppPrefs::nightMode).observe(this, {
+            AppCompatDelegate.setDefaultNightMode(it)
+        })
+
     }
 }

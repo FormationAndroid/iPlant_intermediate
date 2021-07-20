@@ -4,9 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="viewModel"
-            type="com.iplant.ui.favorites.FavoritesViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,22 +11,17 @@
         android:layout_height="match_parent"
         tools:context=".ui.favorites.FavoritesViewModel">
 
-        <TextView
-            android:id="@+id/text_favorites"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Favorites"
-            android:text="@{viewModel.text}"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/loutre" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

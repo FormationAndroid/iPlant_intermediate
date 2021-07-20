@@ -26,8 +26,9 @@ class FavoritesFragment : Fragment() {
             inflater, R.layout.fragment_favorites, container, false
         )
 
-        binding.viewModel = favoritesViewModel
 
         return binding.root
     }
+
+
 }

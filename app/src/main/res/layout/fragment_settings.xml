@@ -12,10 +12,43 @@
         android:layout_margin="20dp"
         tools:context=".ui.settings.SettingsFragment">
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Settings"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchNightMode"
+                android:text="Activate night mode"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchHideSynonyms"
+                android:text="Hide synonyms in details page"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write us"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_clear_data"
+                android:text="Clear data"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </RelativeLayout>
 
