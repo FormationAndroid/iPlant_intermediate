@@ -9,8 +9,12 @@ import com.squareup.picasso.Picasso
 
 @BindingAdapter("imageUrl")
 fun loadImage(imageView: ImageView, imageUrl: String?) {
-    Picasso.get()
-        .load(imageUrl)
-        .error(ContextCompat.getDrawable(imageView.context, R.drawable.ic_flower)!!)
-        .into(imageView)
+    if(imageUrl == null) {
+        imageView.setImageDrawable(ContextCompat.getDrawable(imageView.context, R.drawable.ic_flower))
+        imageView.alpha = 0.5f
+    }
+    else {
+        Picasso.get().load(imageUrl).error(ContextCompat.getDrawable(imageView.context, R.drawable.ic_flower)!!).into(imageView)
+        imageView.alpha = 1f
+    }
 }

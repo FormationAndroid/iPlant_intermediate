@@ -11,8 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.iplant.R
 import com.iplant.databinding.FragmentDetailsBinding
-import com.iplant.databinding.FragmentFavoritesBinding
-import com.iplant.ui.settings.toast
 
 class DetailsFragment : Fragment() {
 

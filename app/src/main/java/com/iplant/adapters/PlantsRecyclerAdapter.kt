@@ -5,12 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.iplant.databinding.ItemPlantBinding
 import com.iplant.models.Plant
-import com.squareup.picasso.Picasso
 
+class PlantsRecyclerAdapter : RecyclerView.Adapter<PlantsRecyclerAdapter.UserViewHolder>() {
 
-class PlantRecyclerAdapter(
-    private val plants: List<Plant>
-) : RecyclerView.Adapter<PlantRecyclerAdapter.UserViewHolder>() {
+    private val plants = mutableListOf<Plant>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         return UserViewHolder(
@@ -19,6 +17,12 @@ class PlantRecyclerAdapter(
                 false
             )
         )
+    }
+
+    fun updateList(newPlants: List<Plant>){
+        plants.clear()
+        plants.addAll(newPlants)
+        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
@@ -36,4 +40,3 @@ class PlantRecyclerAdapter(
     override fun getItemCount() = plants.size
 
 }
-

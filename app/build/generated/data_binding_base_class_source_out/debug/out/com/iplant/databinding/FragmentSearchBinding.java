@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,10 +18,14 @@ public abstract class FragmentSearchBinding extends ViewDataBinding {
   @NonNull
   public final RecyclerView recyclerPlants;
 
+  @NonNull
+  public final SearchView searchView;
+
   protected FragmentSearchBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView recyclerPlants) {
+      RecyclerView recyclerPlants, SearchView searchView) {
     super(_bindingComponent, _root, _localFieldCount);
     this.recyclerPlants = recyclerPlants;
+    this.searchView = searchView;
   }
 
   @NonNull

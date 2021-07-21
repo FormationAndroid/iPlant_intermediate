@@ -96,29 +96,29 @@ public class ItemPlantBindingImpl extends ItemPlantBinding  {
             mDirtyFlags = 0;
         }
         com.iplant.models.Plant plant = mPlant;
-        java.lang.String plantName = null;
+        java.lang.String plantScientificName = null;
+        java.lang.String plantImageUrl = null;
         java.lang.String plantFamily = null;
-        java.lang.String plantImgUrl = null;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
 
 
                 if (plant != null) {
-                    // read plant.name
-                    plantName = plant.getName();
+                    // read plant.scientificName
+                    plantScientificName = plant.getScientificName();
+                    // read plant.imageUrl
+                    plantImageUrl = plant.getImageUrl();
                     // read plant.family
                     plantFamily = plant.getFamily();
-                    // read plant.imgUrl
-                    plantImgUrl = plant.getImgUrl();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            com.iplant.adapters.binding.ImagesBindingAdaptersKt.loadImage(this.imageViewPlant, plantImgUrl);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.textView, plantName);
+            com.iplant.adapters.binding.ImagesBindingAdaptersKt.loadImage(this.imageViewPlant, plantImageUrl);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.textView, plantScientificName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.textView3, plantFamily);
         }
     }

@@ -4,16 +4,12 @@
         "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/layout/fragment_search.xml"
     },
     {
-        "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_delete_confirmation.xml",
-        "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/layout/dialog_delete_confirmation.xml"
-    },
-    {
         "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_plant.xml",
         "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/layout/item_plant.xml"
     },
     {
-        "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_user.xml",
-        "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/layout/item_user.xml"
+        "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_delete_confirmation.xml",
+        "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/layout/dialog_delete_confirmation.xml"
     },
     {
         "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",

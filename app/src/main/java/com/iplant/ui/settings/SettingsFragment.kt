@@ -74,7 +74,3 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 }
-
-
-fun Fragment.toast(text: String) =
-    Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()

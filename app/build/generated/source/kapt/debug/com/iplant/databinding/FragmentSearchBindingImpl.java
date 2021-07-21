@@ -15,6 +15,7 @@ public class FragmentSearchBindingImpl extends FragmentSearchBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.recyclerPlants, 1);
+        sViewsWithIds.put(R.id.searchView, 2);
     }
     // views
     @NonNull
@@ -25,11 +26,12 @@ public class FragmentSearchBindingImpl extends FragmentSearchBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentSearchBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
     }
     private FragmentSearchBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (androidx.appcompat.widget.SearchView) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

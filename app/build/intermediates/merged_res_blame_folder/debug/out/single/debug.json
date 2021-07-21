@@ -48,12 +48,12 @@
         "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/layout/fragment_search.xml"
     },
     {
-        "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
-    },
-    {
         "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/res/merged/debug/drawable_ic_flower.xml.flat",
         "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/drawable/ic_flower.xml"
+    },
+    {
+        "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/jerome/StudioProjects/iPlant-base/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/jerome/StudioProjects/iPlant-base/app/build/intermediates/res/merged/debug/drawable_ic_menu_favorite.xml.flat",
