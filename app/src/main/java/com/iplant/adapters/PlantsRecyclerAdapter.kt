@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.iplant.databinding.ItemPlantBinding
 import com.iplant.models.Plant
 
-class PlantsRecyclerAdapter : RecyclerView.Adapter<PlantsRecyclerAdapter.UserViewHolder>() {
+class PlantsRecyclerAdapter( val onPlantSelected: (plant: Plant) -> Unit ) : RecyclerView.Adapter<PlantsRecyclerAdapter.UserViewHolder>() {
 
     private val plants = mutableListOf<Plant>()
 
@@ -33,6 +33,9 @@ class PlantsRecyclerAdapter : RecyclerView.Adapter<PlantsRecyclerAdapter.UserVie
 
         fun bind(plant: Plant){
             binding.plant = plant
+            binding.root.setOnClickListener {
+                onPlantSelected(plant)
+            }
         }
 
     }

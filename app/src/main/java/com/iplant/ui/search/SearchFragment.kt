@@ -9,6 +9,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.iplant.R
 import com.iplant.adapters.PlantsRecyclerAdapter
@@ -31,7 +32,12 @@ class SearchFragment : Fragment() {
             inflater, R.layout.fragment_search, container, false
         )
 
-        val plantsAdapter = PlantsRecyclerAdapter()
+        val plantsAdapter = PlantsRecyclerAdapter { plant ->
+            val action =
+                SearchFragmentDirections.actionNavigationSearchToDetailsFragment(plantId = plant.id)
+            findNavController().navigate(action)
+        }
+
         binding.recyclerPlants.adapter = plantsAdapter
         binding.recyclerPlants.addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL))
 
