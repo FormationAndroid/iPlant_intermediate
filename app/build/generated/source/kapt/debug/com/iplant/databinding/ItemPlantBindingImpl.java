@@ -64,7 +64,7 @@ public class ItemPlantBindingImpl extends ItemPlantBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.plant == variableId) {
-            setPlant((com.iplant.models.Plant) variable);
+            setPlant((com.iplant.models.plantsearch.Plant) variable);
         }
         else {
             variableSet = false;
@@ -72,7 +72,7 @@ public class ItemPlantBindingImpl extends ItemPlantBinding  {
             return variableSet;
     }
 
-    public void setPlant(@Nullable com.iplant.models.Plant Plant) {
+    public void setPlant(@Nullable com.iplant.models.plantsearch.Plant Plant) {
         this.mPlant = Plant;
         synchronized(this) {
             mDirtyFlags |= 0x1L;
@@ -95,7 +95,7 @@ public class ItemPlantBindingImpl extends ItemPlantBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        com.iplant.models.Plant plant = mPlant;
+        com.iplant.models.plantsearch.Plant plant = mPlant;
         java.lang.String plantScientificName = null;
         java.lang.String plantImageUrl = null;
         java.lang.String plantFamily = null;

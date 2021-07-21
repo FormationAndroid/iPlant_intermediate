@@ -12,7 +12,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.iplant.R;
-import com.iplant.models.Plant;
+import com.iplant.models.plantsearch.Plant;
 import java.lang.Deprecated;
 import java.lang.Object;
 

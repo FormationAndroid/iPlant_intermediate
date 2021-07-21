@@ -10,9 +10,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.Guideline;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.iplant.R;
+import com.iplant.models.plant.PlantDetails;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -41,6 +43,9 @@ public abstract class FragmentDetailsBinding extends ViewDataBinding {
   @NonNull
   public final TextView textView5;
 
+  @Bindable
+  protected PlantDetails mPlant;
+
   protected FragmentDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button button20, Guideline guideline3, Guideline guideline4, Guideline guideline5,
       ImageView imageView, ImageView imageView3, TextView textView4, TextView textView5) {
@@ -53,6 +58,13 @@ public abstract class FragmentDetailsBinding extends ViewDataBinding {
     this.imageView3 = imageView3;
     this.textView4 = textView4;
     this.textView5 = textView5;
+  }
+
+  public abstract void setPlant(@Nullable PlantDetails plant);
+
+  @Nullable
+  public PlantDetails getPlant() {
+    return mPlant;
   }
 
   @NonNull

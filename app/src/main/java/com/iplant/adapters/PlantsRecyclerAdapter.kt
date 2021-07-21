@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.iplant.databinding.ItemPlantBinding
-import com.iplant.models.Plant
+import com.iplant.models.plantsearch.Plant
 
 class PlantsRecyclerAdapter( val onPlantSelected: (plant: Plant) -> Unit ) : RecyclerView.Adapter<PlantsRecyclerAdapter.UserViewHolder>() {
 

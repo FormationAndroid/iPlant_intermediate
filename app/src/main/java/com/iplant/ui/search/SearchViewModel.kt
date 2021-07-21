@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.iplant.api.ApiResult
-import com.iplant.models.Plant
+import com.iplant.models.plantsearch.Plant
 import com.iplant.repository.RemoteRepository
 import kotlinx.coroutines.launch
 

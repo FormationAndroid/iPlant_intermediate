@@ -1,4 +1,4 @@
-package com.iplant.models
+package com.iplant.models.plantsearch
 
 
 import com.google.gson.annotations.SerializedName

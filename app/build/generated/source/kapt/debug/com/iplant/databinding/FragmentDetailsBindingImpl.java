@@ -14,13 +14,10 @@ public class FragmentDetailsBindingImpl extends FragmentDetailsBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.imageView3, 1);
-        sViewsWithIds.put(R.id.guideline3, 2);
-        sViewsWithIds.put(R.id.guideline4, 3);
-        sViewsWithIds.put(R.id.button20, 4);
-        sViewsWithIds.put(R.id.guideline5, 5);
-        sViewsWithIds.put(R.id.textView4, 6);
-        sViewsWithIds.put(R.id.textView5, 7);
+        sViewsWithIds.put(R.id.guideline3, 4);
+        sViewsWithIds.put(R.id.guideline4, 5);
+        sViewsWithIds.put(R.id.button20, 6);
+        sViewsWithIds.put(R.id.guideline5, 7);
         sViewsWithIds.put(R.id.imageView, 8);
     }
     // views
@@ -36,17 +33,20 @@ public class FragmentDetailsBindingImpl extends FragmentDetailsBinding  {
     }
     private FragmentDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[4]
-            , (androidx.constraintlayout.widget.Guideline) bindings[2]
-            , (androidx.constraintlayout.widget.Guideline) bindings[3]
+            , (android.widget.Button) bindings[6]
+            , (androidx.constraintlayout.widget.Guideline) bindings[4]
             , (androidx.constraintlayout.widget.Guideline) bindings[5]
+            , (androidx.constraintlayout.widget.Guideline) bindings[7]
             , (android.widget.ImageView) bindings[8]
             , (android.widget.ImageView) bindings[1]
-            , (android.widget.TextView) bindings[6]
-            , (android.widget.TextView) bindings[7]
+            , (android.widget.TextView) bindings[2]
+            , (android.widget.TextView) bindings[3]
             );
+        this.imageView3.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.textView4.setTag(null);
+        this.textView5.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -55,7 +55,7 @@ public class FragmentDetailsBindingImpl extends FragmentDetailsBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x1L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -73,7 +73,22 @@ public class FragmentDetailsBindingImpl extends FragmentDetailsBinding  {
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
+        if (BR.plant == variableId) {
+            setPlant((com.iplant.models.plant.PlantDetails) variable);
+        }
+        else {
+            variableSet = false;
+        }
             return variableSet;
+    }
+
+    public void setPlant(@Nullable com.iplant.models.plant.PlantDetails Plant) {
+        this.mPlant = Plant;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.plant);
+        super.requestRebind();
     }
 
     @Override
@@ -90,14 +105,59 @@ public class FragmentDetailsBindingImpl extends FragmentDetailsBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String plantMainSpeciesImageUrl = null;
+        java.lang.String plantCommonName = null;
+        com.iplant.models.plant.PlantDetails plant = mPlant;
+        java.util.List<com.iplant.models.plant.Source> plantSources = null;
+        java.lang.String plantSourcesGetInt0Citation = null;
+        com.iplant.models.plant.MainSpecies plantMainSpecies = null;
+        com.iplant.models.plant.Source plantSourcesGetInt0 = null;
+
+        if ((dirtyFlags & 0x3L) != 0) {
+
+
+
+                if (plant != null) {
+                    // read plant.commonName
+                    plantCommonName = plant.getCommonName();
+                    // read plant.sources
+                    plantSources = plant.getSources();
+                    // read plant.mainSpecies
+                    plantMainSpecies = plant.getMainSpecies();
+                }
+
+
+                if (plantSources != null) {
+                    // read plant.sources.get(0)
+                    plantSourcesGetInt0 = plantSources.get(0);
+                }
+                if (plantMainSpecies != null) {
+                    // read plant.mainSpecies.imageUrl
+                    plantMainSpeciesImageUrl = plantMainSpecies.getImageUrl();
+                }
+
+
+                if (plantSourcesGetInt0 != null) {
+                    // read plant.sources.get(0).citation
+                    plantSourcesGetInt0Citation = plantSourcesGetInt0.getCitation();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x3L) != 0) {
+            // api target 1
+
+            com.iplant.adapters.binding.ImagesBindingAdaptersKt.loadImage(this.imageView3, plantMainSpeciesImageUrl);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.textView4, plantCommonName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.textView5, plantSourcesGetInt0Citation);
+        }
     }
     // Listener Stub Implementations
     // callback impls
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): null
+        flag 0 (0x1L): plant
+        flag 1 (0x2L): null
     flag mapping end*/
     //end
 }

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="plant"
-            type="com.iplant.models.Plant" />
+            type="com.iplant.models.plantsearch.Plant" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
