@@ -2002,9 +2002,9 @@ int id ifRoom 0x7f0800c5
 int id ignore 0x7f0800c6
 int id ignoreRequest 0x7f0800c7
 int id image 0x7f0800c8
-int id imageView 0x7f0800c9
 int id imageView2 0x7f0800ca
 int id imageView3 0x7f0800cb
+int id imageViewFavorite 0x7f0801d3
 int id imageViewPlant 0x7f0801d1
 int id info 0x7f0800cc
 int id invisible 0x7f0800cd

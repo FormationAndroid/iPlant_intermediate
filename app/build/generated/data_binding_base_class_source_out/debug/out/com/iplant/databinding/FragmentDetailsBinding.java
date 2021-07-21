@@ -32,10 +32,10 @@ public abstract class FragmentDetailsBinding extends ViewDataBinding {
   public final Guideline guideline5;
 
   @NonNull
-  public final ImageView imageView;
+  public final ImageView imageView3;
 
   @NonNull
-  public final ImageView imageView3;
+  public final ImageView imageViewFavorite;
 
   @NonNull
   public final TextView textView4;
@@ -48,14 +48,14 @@ public abstract class FragmentDetailsBinding extends ViewDataBinding {
 
   protected FragmentDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button button20, Guideline guideline3, Guideline guideline4, Guideline guideline5,
-      ImageView imageView, ImageView imageView3, TextView textView4, TextView textView5) {
+      ImageView imageView3, ImageView imageViewFavorite, TextView textView4, TextView textView5) {
     super(_bindingComponent, _root, _localFieldCount);
     this.button20 = button20;
     this.guideline3 = guideline3;
     this.guideline4 = guideline4;
     this.guideline5 = guideline5;
-    this.imageView = imageView;
     this.imageView3 = imageView3;
+    this.imageViewFavorite = imageViewFavorite;
     this.textView4 = textView4;
     this.textView5 = textView5;
   }

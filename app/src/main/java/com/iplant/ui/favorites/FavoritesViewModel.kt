@@ -1,12 +1,14 @@
 package com.iplant.ui.favorites
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.iplant.api.ApiResult
-import kotlinx.coroutines.launch
+import com.iplant.models.plantsearch.Plant
+import com.iplant.repository.LocalRepository
 
 class FavoritesViewModel : ViewModel() {
+
+    val favoritePlants: LiveData<List<Plant>> = LocalRepository.getAllFavoritesPlants()
+
+
 
 }

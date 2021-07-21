@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.iplant.App"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -32,6 +33,10 @@
         </activity>
 
         <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.iplant.com.squareup.picasso"
+            android:exported="false" />
+        <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.iplant.androidx-startup"
             android:exported="false" >
@@ -41,9 +46,10 @@
                 android:name="com.chibatching.kotpref.initializer.KotprefInitializer"
                 android:value="androidx.startup" />
         </provider>
-        <provider
-            android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.iplant.com.squareup.picasso"
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
             android:exported="false" />
     </application>
 

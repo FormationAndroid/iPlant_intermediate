@@ -18,7 +18,7 @@ public class FragmentDetailsBindingImpl extends FragmentDetailsBinding  {
         sViewsWithIds.put(R.id.guideline4, 5);
         sViewsWithIds.put(R.id.button20, 6);
         sViewsWithIds.put(R.id.guideline5, 7);
-        sViewsWithIds.put(R.id.imageView, 8);
+        sViewsWithIds.put(R.id.imageViewFavorite, 8);
     }
     // views
     @NonNull
@@ -37,8 +37,8 @@ public class FragmentDetailsBindingImpl extends FragmentDetailsBinding  {
             , (androidx.constraintlayout.widget.Guideline) bindings[4]
             , (androidx.constraintlayout.widget.Guideline) bindings[5]
             , (androidx.constraintlayout.widget.Guideline) bindings[7]
-            , (android.widget.ImageView) bindings[8]
             , (android.widget.ImageView) bindings[1]
+            , (android.widget.ImageView) bindings[8]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[3]
             );

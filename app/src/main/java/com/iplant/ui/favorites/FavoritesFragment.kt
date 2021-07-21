@@ -14,21 +14,21 @@ import com.iplant.databinding.FragmentFavoritesBinding
 
 class FavoritesFragment : Fragment() {
 
-    private lateinit var favoritesViewModel: FavoritesViewModel
+    private lateinit var viewModel: FavoritesViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        favoritesViewModel = ViewModelProvider(this).get(FavoritesViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(FavoritesViewModel::class.java)
 
         val binding: FragmentFavoritesBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_favorites, container, false
         )
 
+
         return binding.root
     }
-
 
 }

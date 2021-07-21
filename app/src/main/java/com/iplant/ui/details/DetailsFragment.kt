@@ -29,6 +29,7 @@ class DetailsFragment : Fragment() {
         )
 
         viewModel.plantDetailsResultLiveData.observe(viewLifecycleOwner, {
+            it?.id?.let { id -> viewModel.setIdPlant(id) }
             binding.plant = it
         })
 
@@ -37,6 +38,14 @@ class DetailsFragment : Fragment() {
         })
 
         viewModel.getPlantDetails(args.plantId)
+
+        viewModel.plantFavoriteLiveData.observe(viewLifecycleOwner, {
+            toast("test : $it")
+        })
+
+        binding.imageViewFavorite.setOnClickListener {
+            viewModel.addOrRemoveFromFavorite()
+        }
 
         return binding.root
     }
